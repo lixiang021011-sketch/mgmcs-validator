@@ -1,0 +1,9 @@
+{
+ "schemaVersion": "0.1",
+ "song": "new_123",
+ "source": "mapperatorinator",
+ "observationsFrom": "timing_events.json（模型自己那串 observation）",
+ "timingEvents": [],
+ "redlines": [],
+ "audioDurationSeconds": null
+}

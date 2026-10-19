@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>乐句切分抽检 · MGMCS</title>
+<link rel="stylesheet" href="style.css?v=21">
+<style>
+  body { margin: 0; padding: 18px 22px; }
+  .nav a { margin-right: 14px; }
+  h2 { margin: 6px 0 4px; }
+  .legend { color: #9aa4b2; font-size: 12.5px; margin: 6px 0 12px; line-height: 1.7; }
+  .pill { border: 1px solid #30363d; border-radius: 10px; padding: 0 6px; font-size: 12px; color: #9aa4b2; }
+  #error { display: none; border: 1px solid #b62324; background: #2b1416; color: #ffb4b4;
+           padding: 8px 10px; border-radius: 6px; margin: 8px 0; font-size: 12.5px; }
+  .item { border: 1px solid #23272e; border-radius: 8px; padding: 10px 12px; margin: 8px 0; }
+  .item.done { opacity: 0.5; }
+  .row1 { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; font-size: 13px; }
+  .chip { border-radius: 10px; padding: 1px 8px; font-size: 12px; border: 1px solid #30363d; }
+  .anchor { background: #17301f; border-color: #2ea043; color: #7ee787; }
+  .radiated { background: #2b2418; border-color: #9e6a03; color: #e3b341; }
+  .pickup { background: #1f2a37; border-color: #1f6feb; color: #79c0ff; }
+  .empty { background: #2d2d2d; border-color: #555; color: #aaa; }
+  .q { color: #9aa4b2; font-size: 12.5px; margin: 6px 0 8px; }
+  .t { font-variant-numeric: tabular-nums; color: #9aa4b2; }
+  button { margin-right: 6px; }
+  button.on { border-color: #6ea8fe; color: #79c0ff; }
+  audio { width: 100%; margin: 4px 0 6px; }
+  .bar { display: flex; gap: 10px; align-items: center; margin: 10px 0; flex-wrap: wrap; }
+  pre { background: #11151a; border: 1px solid #23272e; padding: 10px; overflow: auto; max-height: 40vh; }
+</style>
+</head>
+<body>
+<div class="nav">
+  <a href="index.html">验证器</a>
+  <a href="harmony.html">和弦体检</a>
+  <a href="timing.html">timing 体检</a>
+  <a href="songs.html">歌单</a>
+  <b>乐句切分抽检</b>
+</div>
+<h2>乐句切分抽检 <span class="pill" id="count">22 条</span></h2>
+<div id="error"></div>
+<p class="legend">
+  切法：先找换气当锚，再从锚往两边量 2 小节。每条边界都标了来源 ——
+  <b class="chip anchor">anchor</b> 边界就是换气；
+  <b class="chip radiated">radiated</b> 边界是我们按 2 小节量出来的（<b>这层是抽检重点</b>：
+  它要是听起来也像句尾，2 小节辐射就站得住）；
+  <b class="chip pickup">pickup</b> 段首那一小节起句；
+  <b class="chip empty">empty</b> 一块里没有音（对照）。
+  每条下面的播放器自动从<b>前一小节</b>起、放到<b>后一小节</b>停，听得出语气；
+  判词存在浏览器本地，判完点"导出判词"。<b>这一页的卡片是预先写好的：脚本挂了也照样显示、照样能听。</b>
+</p>
+<div class="bar">
+  <label><input type="checkbox" id="onlyunjudged"> 只看没判的</label>
+  <button id="clear">清空判词</button>
+  <button id="export">导出判词</button>
+  <span class="t" id="progress"></span>
+</div>
+<pre id="dump" style="display:none"></pre>
+<div id="list">
+<div class="item" data-id="free-chichunhua-bar9" data-bucket="free" data-song="chichunhua" data-bars="9–13" data-kind="free" data-notes="24" data-playstart="12.96" data-playend="23.48"><div class="row1"><span class="chip free">1. free</span><b>chichunhua</b><span class="t">bar 9–13（4 小节）</span><span class="t">这一块 14.72–21.72 秒</span><span class="t">音符 24</span><span class="t">边界来源 free</span></div><div class="q">这条线**人声没跨过**（切在静音里）。听：这一句是不是在这里收尾？<br><span class="t">原曲 13.0–23.5 秒（前后各留一小节）｜人声：在唱 75%；均值 -20.2 dB</span></div><audio controls preload="none" src="audit_clips/free-chichunhua-bar9.ogg"></audio><div class="t">↑ 混音（带伴奏）　↓ 人声分轨</div><audio controls preload="none" src="audit_clips/free-chichunhua-bar9.vocal.ogg"></audio><button class="v" data-v="yes">像</button><button class="v" data-v="no">不像</button><button class="v" data-v="unsure">说不清</button></div>
+<div class="item" data-id="free-dubai-bar1" data-bucket="free" data-song="dubai" data-bars="1–5" data-kind="free" data-notes="14" data-playstart="0.0" data-playend="7.54"><div class="row1"><span class="chip free">2. free</span><b>dubai</b><span class="t">bar 1–5（4 小节）</span><span class="t">这一块 0.46–6.12 秒</span><span class="t">音符 14</span><span class="t">边界来源 free</span></div><div class="q">这条线**人声没跨过**（切在静音里）。听：这一句是不是在这里收尾？<br><span class="t">原曲 0.0–7.5 秒（前后各留一小节）｜人声：在唱 66%；均值 -18.5 dB</span></div><audio controls preload="none" src="audit_clips/free-dubai-bar1.ogg"></audio><div class="t">↑ 混音（带伴奏）　↓ 人声分轨</div><audio controls preload="none" src="audit_clips/free-dubai-bar1.vocal.ogg"></audio><button class="v" data-v="yes">像</button><button class="v" data-v="no">不像</button><button class="v" data-v="unsure">说不清</button></div>
+<div class="item" data-id="free-eine-bar1" data-bucket="free" data-song="eine" data-bars="1–3" data-kind="free" data-notes="20" data-playstart="0.0" data-playend="9.68"><div class="row1"><span class="chip free">3. free</span><b>eine</b><span class="t">bar 1–3（2 小节）</span><span class="t">这一块 1.4–6.92 秒</span><span class="t">音符 20</span><span class="t">边界来源 free</span></div><div class="q">这条线**人声没跨过**（切在静音里）。听：这一句是不是在这里收尾？<br><span class="t">原曲 0.0–9.7 秒（前后各留一小节）｜人声：在唱 81%；均值 -16.0 dB</span></div><audio controls preload="none" src="audit_clips/free-eine-bar1.ogg"></audio><div class="t">↑ 混音（带伴奏）　↓ 人声分轨</div><audio controls preload="none" src="audit_clips/free-eine-bar1.vocal.ogg"></audio><button class="v" data-v="yes">像</button><button class="v" data-v="no">不像</button><button class="v" data-v="unsure">说不清</button></div>
+<div class="item" data-id="free-flyway-bar1" data-bucket="free" data-song="flyway" data-bars="1–5" data-kind="free" data-notes="22" data-playstart="0.0" data-playend="14.24"><div class="row1"><span class="chip free">4. free</span><b>flyway</b><span class="t">bar 1–5（4 小节）</span><span class="t">这一块 1.61–11.71 秒</span><span class="t">音符 22</span><span class="t">边界来源 free</span></div><div class="q">这条线**人声没跨过**（切在静音里）。听：这一句是不是在这里收尾？<br><span class="t">原曲 0.0–14.2 秒（前后各留一小节）｜人声：在唱 56%；均值 -17.5 dB</span></div><audio controls preload="none" src="audit_clips/free-flyway-bar1.ogg"></audio><div class="t">↑ 混音（带伴奏）　↓ 人声分轨</div><audio controls preload="none" src="audit_clips/free-flyway-bar1.vocal.ogg"></audio><button class="v" data-v="yes">像</button><button class="v" data-v="no">不像</button><button class="v" data-v="unsure">说不清</button></div>
+<div class="item" data-id="free-flywayleo-bar1" data-bucket="free" data-song="flywayleo" data-bars="1–3" data-kind="free" data-notes="17" data-playstart="0.0" data-playend="9.47"><div class="row1"><span class="chip free">5. free</span><b>flywayleo</b><span class="t">bar 1–3（2 小节）</span><span class="t">这一块 1.9–6.94 秒</span><span class="t">音符 17</span><span class="t">边界来源 free</span></div><div class="q">这条线**人声没跨过**（切在静音里）。听：这一句是不是在这里收尾？<br><span class="t">原曲 0.0–9.5 秒（前后各留一小节）｜人声：在唱 55%；均值 -19.6 dB</span></div><audio controls preload="none" src="audit_clips/free-flywayleo-bar1.ogg"></audio><div class="t">↑ 混音（带伴奏）　↓ 人声分轨</div><audio controls preload="none" src="audit_clips/free-flywayleo-bar1.vocal.ogg"></audio><button class="v" data-v="yes">像</button><button class="v" data-v="no">不像</button><button class="v" data-v="unsure">说不清</button></div>
+<div class="item" data-id="free-haiiro-bar9" data-bucket="free" data-song="haiiro" data-bars="9–11" data-kind="free" data-notes="15" data-playstart="16.6" data-playend="25.48"><div class="row1"><span class="chip free">6. free</span><b>haiiro</b><span class="t">bar 9–11（2 小节）</span><span class="t">这一块 18.82–23.26 秒</span><span class="t">音符 15</span><span class="t">边界来源 free</span></div><div class="q">这条线**人声没跨过**（切在静音里）。听：这一句是不是在这里收尾？<br><span class="t">原曲 16.6–25.5 秒（前后各留一小节）｜人声：在唱 61%；均值 -25.3 dB</span></div><audio controls preload="none" src="audit_clips/free-haiiro-bar9.ogg"></audio><div class="t">↑ 混音（带伴奏）　↓ 人声分轨</div><audio controls preload="none" src="audit_clips/free-haiiro-bar9.vocal.ogg"></audio><button class="v" data-v="yes">像</button><button class="v" data-v="no">不像</button><button class="v" data-v="unsure">说不清</button></div>
+<div class="item" data-id="free-happyend-bar7" data-bucket="free" data-song="happyend" data-bars="7–11" data-kind="free" data-notes="40" data-playstart="17.52" data-playend="36.26"><div class="row1"><span class="chip free">7. free</span><b>happyend</b><span class="t">bar 7–11（4 小节）</span><span class="t">这一块 20.64–33.14 秒</span><span class="t">音符 40</span><span class="t">边界来源 free</span></div><div class="q">这条线**人声没跨过**（切在静音里）。听：这一句是不是在这里收尾？<br><span class="t">原曲 17.5–36.3 秒（前后各留一小节）｜人声：在唱 76%；均值 -17.1 dB</span></div><audio controls preload="none" src="audit_clips/free-happyend-bar7.ogg"></audio><div class="t">↑ 混音（带伴奏）　↓ 人声分轨</div><audio controls preload="none" src="audit_clips/free-happyend-bar7.vocal.ogg"></audio><button class="v" data-v="yes">像</button><button class="v" data-v="no">不像</button><button class="v" data-v="unsure">说不清</button></div>
+<div class="item" data-id="free-henceforth-bar9" data-bucket="free" data-song="henceforth" data-bars="9–11" data-kind="free" data-notes="11" data-playstart="11.21" data-playend="17.28"><div class="row1"><span class="chip free">8. free</span><b>henceforth</b><span class="t">bar 9–11（2 小节）</span><span class="t">这一块 12.73–15.76 秒</span><span class="t">音符 11</span><span class="t">边界来源 free</span></div><div class="q">这条线**人声没跨过**（切在静音里）。听：这一句是不是在这里收尾？<br><span class="t">原曲 11.2–17.3 秒（前后各留一小节）｜人声：在唱 67%；均值 -17.2 dB</span></div><audio controls preload="none" src="audit_clips/free-henceforth-bar9.ogg"></audio><div class="t">↑ 混音（带伴奏）　↓ 人声分轨</div><audio controls preload="none" src="audit_clips/free-henceforth-bar9.vocal.ogg"></audio><button class="v" data-v="yes">像</button><button class="v" data-v="no">不像</button><button class="v" data-v="unsure">说不清</button></div>
+<div class="item" data-id="free-hitchcock-bar1" data-bucket="free" data-song="hitchcock" data-bars="1–4" data-kind="free" data-notes="19" data-playstart="0.0" data-playend="6.14"><div class="row1"><span class="chip free">9. free</span><b>hitchcock</b><span class="t">bar 1–4（3 小节）</span><span class="t">这一块 0.48–4.72 秒</span><span class="t">音符 19</span><span class="t">边界来源 free</span></div><div class="q">这条线**人声没跨过**（切在静音里）。听：这一句是不是在这里收尾？<br><span class="t">原曲 0.0–6.1 秒（前后各留一小节）｜人声：在唱 64%；均值 -20.9 dB</span></div><audio controls preload="none" src="audit_clips/free-hitchcock-bar1.ogg"></audio><div class="t">↑ 混音（带伴奏）　↓ 人声分轨</div><audio controls preload="none" src="audit_clips/free-hitchcock-bar1.vocal.ogg"></audio><button class="v" data-v="yes">像</button><button class="v" data-v="no">不像</button><button class="v" data-v="unsure">说不清</button></div>
+<div class="item" data-id="free-iloveyou-bar7" data-bucket="free" data-song="iloveyou" data-bars="7–14" data-kind="free" data-notes="46" data-playstart="14.22" data-playend="41.9"><div class="row1"><span class="chip free">10. free</span><b>iloveyou</b><span class="t">bar 7–14（7 小节）</span><span class="t">这一块 17.3–38.82 秒</span><span class="t">音符 46</span><span class="t">边界来源 free</span></div><div class="q">这条线**人声没跨过**（切在静音里）。听：这一句是不是在这里收尾？<br><span class="t">原曲 14.2–41.9 秒（前后各留一小节）｜人声：在唱 80%；均值 -15.6 dB</span></div><audio controls preload="none" src="audit_clips/free-iloveyou-bar7.ogg"></audio><div class="t">↑ 混音（带伴奏）　↓ 人声分轨</div><audio controls preload="none" src="audit_clips/free-iloveyou-bar7.vocal.ogg"></audio><button class="v" data-v="yes">像</button><button class="v" data-v="no">不像</button><button class="v" data-v="unsure">说不清</button></div>
+<div class="item" data-id="free-kaitou-bar11" data-bucket="free" data-song="kaitou" data-bars="11–14" data-kind="free" data-notes="13" data-playstart="20.92" data-playend="31.45"><div class="row1"><span class="chip free">11. free</span><b>kaitou</b><span class="t">bar 11–14（3 小节）</span><span class="t">这一块 23.029–29.345 秒</span><span class="t">音符 13</span><span class="t">边界来源 free</span></div><div class="q">这条线**人声没跨过**（切在静音里）。听：这一句是不是在这里收尾？<br><span class="t">原曲 20.9–31.4 秒（前后各留一小节）｜人声：在唱 88%；均值 -14.4 dB</span></div><audio controls preload="none" src="audit_clips/free-kaitou-bar11.ogg"></audio><div class="t">↑ 混音（带伴奏）　↓ 人声分轨</div><audio controls preload="none" src="audit_clips/free-kaitou-bar11.vocal.ogg"></audio><button class="v" data-v="yes">像</button><button class="v" data-v="no">不像</button><button class="v" data-v="unsure">说不清</button></div>
+<div class="item" data-id="free-kaluo-bar9" data-bucket="free" data-song="kaluo" data-bars="9–14" data-kind="free" data-notes="26" data-playstart="15.7" data-playend="31.26"><div class="row1"><span class="chip free">12. free</span><b>kaluo</b><span class="t">bar 9–14（5 小节）</span><span class="t">这一块 17.92–29.04 秒</span><span class="t">音符 26</span><span class="t">边界来源 free</span></div><div class="q">这条线**人声没跨过**（切在静音里）。听：这一句是不是在这里收尾？<br><span class="t">原曲 15.7–31.3 秒（前后各留一小节）｜人声：在唱 67%；均值 -20.4 dB</span></div><audio controls preload="none" src="audit_clips/free-kaluo-bar9.ogg"></audio><div class="t">↑ 混音（带伴奏）　↓ 人声分轨</div><audio controls preload="none" src="audit_clips/free-kaluo-bar9.vocal.ogg"></audio><button class="v" data-v="yes">像</button><button class="v" data-v="no">不像</button><button class="v" data-v="unsure">说不清</button></div>
+<div class="item" data-id="free-kiechau-bar1" data-bucket="free" data-song="kiechau" data-bars="1–4" data-kind="free" data-notes="13" data-playstart="0.0" data-playend="10.54"><div class="row1"><span class="chip free">13. free</span><b>kiechau</b><span class="t">bar 1–4（3 小节）</span><span class="t">这一块 1.4–8.257 秒</span><span class="t">音符 13</span><span class="t">边界来源 free</span></div><div class="q">这条线**人声没跨过**（切在静音里）。听：这一句是不是在这里收尾？<br><span class="t">原曲 0.0–10.5 秒（前后各留一小节）｜人声：在唱 76%；均值 -21.1 dB</span></div><audio controls preload="none" src="audit_clips/free-kiechau-bar1.ogg"></audio><div class="t">↑ 混音（带伴奏）　↓ 人声分轨</div><audio controls preload="none" src="audit_clips/free-kiechau-bar1.vocal.ogg"></audio><button class="v" data-v="yes">像</button><button class="v" data-v="no">不像</button><button class="v" data-v="unsure">说不清</button></div>
+<div class="item" data-id="free-knowme-bar9" data-bucket="free" data-song="knowme" data-bars="9–12" data-kind="free" data-notes="12" data-playstart="11.06" data-playend="18.44"><div class="row1"><span class="chip free">14. free</span><b>knowme</b><span class="t">bar 9–12（3 小节）</span><span class="t">这一块 12.54–16.96 秒</span><span class="t">音符 12</span><span class="t">边界来源 free</span></div><div class="q">这条线**人声没跨过**（切在静音里）。听：这一句是不是在这里收尾？<br><span class="t">原曲 11.1–18.4 秒（前后各留一小节）｜人声：在唱 67%；均值 -19.7 dB</span></div><audio controls preload="none" src="audit_clips/free-knowme-bar9.ogg"></audio><div class="t">↑ 混音（带伴奏）　↓ 人声分轨</div><audio controls preload="none" src="audit_clips/free-knowme-bar9.vocal.ogg"></audio><button class="v" data-v="yes">像</button><button class="v" data-v="no">不像</button><button class="v" data-v="unsure">说不清</button></div>
+<div class="item" data-id="edge-chichunhua-bar141" data-bucket="edge" data-song="chichunhua" data-bars="141–143" data-kind="edge" data-notes="11" data-playstart="244.2" data-playend="251.26"><div class="row1"><span class="chip edge">15. edge</span><b>chichunhua</b><span class="t">bar 141–143（2 小节）</span><span class="t">这一块 245.96–249.5 秒</span><span class="t">音符 11</span><span class="t">边界来源 edge</span></div><div class="q">这条线是唱区的边（整段唱歌的开头或结尾）。听：这一块是不是一整句？<br><span class="t">原曲 244.2–251.3 秒（前后各留一小节）｜人声：在唱 92%；均值 -14.1 dB</span></div><audio controls preload="none" src="audit_clips/edge-chichunhua-bar141.ogg"></audio><div class="t">↑ 混音（带伴奏）　↓ 人声分轨</div><audio controls preload="none" src="audit_clips/edge-chichunhua-bar141.vocal.ogg"></audio><button class="v" data-v="yes">像</button><button class="v" data-v="no">不像</button><button class="v" data-v="unsure">说不清</button></div>
+<div class="item" data-id="edge-dubai-bar156" data-bucket="edge" data-song="dubai" data-bars="156–158" data-kind="edge" data-notes="5" data-playstart="213.64" data-playend="219.32"><div class="row1"><span class="chip edge">16. edge</span><b>dubai</b><span class="t">bar 156–158（2 小节）</span><span class="t">这一块 215.06–217.9 秒</span><span class="t">音符 5</span><span class="t">边界来源 edge</span></div><div class="q">这条线是唱区的边（整段唱歌的开头或结尾）。听：这一块是不是一整句？<br><span class="t">原曲 213.6–219.3 秒（前后各留一小节）｜人声：在唱 81%；均值 -14.3 dB</span></div><audio controls preload="none" src="audit_clips/edge-dubai-bar156.ogg"></audio><div class="t">↑ 混音（带伴奏）　↓ 人声分轨</div><audio controls preload="none" src="audit_clips/edge-dubai-bar156.vocal.ogg"></audio><button class="v" data-v="yes">像</button><button class="v" data-v="no">不像</button><button class="v" data-v="unsure">说不清</button></div>
+<div class="item" data-id="edge-eine-bar124" data-bucket="edge" data-song="eine" data-bars="124–127" data-kind="edge" data-notes="9" data-playstart="277.26" data-playend="285.54"><div class="row1"><span class="chip edge">17. edge</span><b>eine</b><span class="t">bar 124–127（3 小节）</span><span class="t">这一块 280.02–282.78 秒</span><span class="t">音符 9</span><span class="t">边界来源 edge</span></div><div class="q">这条线是唱区的边（整段唱歌的开头或结尾）。听：这一块是不是一整句？<br><span class="t">原曲 277.3–285.5 秒（前后各留一小节）｜人声：在唱 82%；均值 -13.3 dB</span></div><audio controls preload="none" src="audit_clips/edge-eine-bar124.ogg"></audio><div class="t">↑ 混音（带伴奏）　↓ 人声分轨</div><audio controls preload="none" src="audit_clips/edge-eine-bar124.vocal.ogg"></audio><button class="v" data-v="yes">像</button><button class="v" data-v="no">不像</button><button class="v" data-v="unsure">说不清</button></div>
+<div class="item" data-id="edge-flyway-bar72" data-bucket="edge" data-song="flyway" data-bars="72–75" data-kind="edge" data-notes="11" data-playstart="178.45" data-playend="191.08"><div class="row1"><span class="chip edge">18. edge</span><b>flyway</b><span class="t">bar 72–75（3 小节）</span><span class="t">这一块 180.98–188.55 秒</span><span class="t">音符 11</span><span class="t">边界来源 edge</span></div><div class="q">这条线是唱区的边（整段唱歌的开头或结尾）。听：这一块是不是一整句？<br><span class="t">原曲 178.4–191.1 秒（前后各留一小节）｜人声：在唱 88%；均值 -14.3 dB</span></div><audio controls preload="none" src="audit_clips/edge-flyway-bar72.ogg"></audio><div class="t">↑ 混音（带伴奏）　↓ 人声分轨</div><audio controls preload="none" src="audit_clips/edge-flyway-bar72.vocal.ogg"></audio><button class="v" data-v="yes">像</button><button class="v" data-v="no">不像</button><button class="v" data-v="unsure">说不清</button></div>
+<div class="item" data-id="empty-haiiro-bar35" data-bucket="empty" data-song="haiiro" data-bars="35–37" data-kind="free" data-notes="0" data-playstart="74.38" data-playend="83.26"><div class="row1"><span class="chip empty">19. empty</span><b>haiiro</b><span class="t">bar 35–37（2 小节）</span><span class="t">这一块 76.6–81.04 秒</span><span class="t">音符 0</span><span class="t">边界来源 free</span></div><div class="q">这一块里一个音都没有。听：这里是不是间奏/空档？<br><span class="t">原曲 74.4–83.3 秒（前后各留一小节）｜人声：在唱 93%；均值 -18.7 dB</span></div><audio controls preload="none" src="audit_clips/empty-haiiro-bar35.ogg"></audio><div class="t">↑ 混音（带伴奏）　↓ 人声分轨</div><audio controls preload="none" src="audit_clips/empty-haiiro-bar35.vocal.ogg"></audio><button class="v" data-v="yes">像</button><button class="v" data-v="no">不像</button><button class="v" data-v="unsure">说不清</button></div>
+<div class="item" data-id="empty-henceforth-bar49" data-bucket="empty" data-song="henceforth" data-bars="49–51" data-kind="free" data-notes="0" data-playstart="71.97" data-playend="78.05"><div class="row1"><span class="chip empty">20. empty</span><b>henceforth</b><span class="t">bar 49–51（2 小节）</span><span class="t">这一块 73.49–76.53 秒</span><span class="t">音符 0</span><span class="t">边界来源 free</span></div><div class="q">这一块里一个音都没有。听：这里是不是间奏/空档？<br><span class="t">原曲 72.0–78.0 秒（前后各留一小节）｜人声：在唱 89%；均值 -14.3 dB</span></div><audio controls preload="none" src="audit_clips/empty-henceforth-bar49.ogg"></audio><div class="t">↑ 混音（带伴奏）　↓ 人声分轨</div><audio controls preload="none" src="audit_clips/empty-henceforth-bar49.vocal.ogg"></audio><button class="v" data-v="yes">像</button><button class="v" data-v="no">不像</button><button class="v" data-v="unsure">说不清</button></div>
+<div class="item" data-id="empty-kaluo-bar96" data-bucket="empty" data-song="kaluo" data-bars="96–98" data-kind="free" data-notes="0" data-playstart="177.92" data-playend="186.8"><div class="row1"><span class="chip empty">21. empty</span><b>kaluo</b><span class="t">bar 96–98（2 小节）</span><span class="t">这一块 180.14–184.58 秒</span><span class="t">音符 0</span><span class="t">边界来源 free</span></div><div class="q">这一块里一个音都没有。听：这里是不是间奏/空档？<br><span class="t">原曲 177.9–186.8 秒（前后各留一小节）｜人声：在唱 100%；均值 -21.4 dB</span></div><audio controls preload="none" src="audit_clips/empty-kaluo-bar96.ogg"></audio><div class="t">↑ 混音（带伴奏）　↓ 人声分轨</div><audio controls preload="none" src="audit_clips/empty-kaluo-bar96.vocal.ogg"></audio><button class="v" data-v="yes">像</button><button class="v" data-v="no">不像</button><button class="v" data-v="unsure">说不清</button></div>
+<div class="item" data-id="empty-kiechau-bar62" data-bucket="empty" data-song="kiechau" data-bars="62–64" data-kind="free" data-notes="0" data-playstart="138.54" data-playend="147.68"><div class="row1"><span class="chip empty">22. empty</span><b>kiechau</b><span class="t">bar 62–64（2 小节）</span><span class="t">这一块 140.823–145.394 秒</span><span class="t">音符 0</span><span class="t">边界来源 free</span></div><div class="q">这一块里一个音都没有。听：这里是不是间奏/空档？<br><span class="t">原曲 138.5–147.7 秒（前后各留一小节）｜人声：在唱 87%；均值 -15.6 dB</span></div><audio controls preload="none" src="audit_clips/empty-kiechau-bar62.ogg"></audio><div class="t">↑ 混音（带伴奏）　↓ 人声分轨</div><audio controls preload="none" src="audit_clips/empty-kiechau-bar62.vocal.ogg"></audio><button class="v" data-v="yes">像</button><button class="v" data-v="no">不像</button><button class="v" data-v="unsure">说不清</button></div>
+</div>
+<script>
+const KEY = 'phrase_audit_v1';
+let judged = {};
+
+function fail(message) {
+  const box = document.getElementById('error');
+  box.style.display = 'block';
+  box.textContent = message;
+}
+
+function load() {
+  try { judged = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) { judged = {}; }
+}
+
+function save() {
+  try { localStorage.setItem(KEY, JSON.stringify(judged)); } catch (e) { /* 存不了也不挡判词 */ }
+}
+
+function paint() {
+  document.querySelectorAll('.item').forEach(card => {
+    const word = judged[card.dataset.id];
+    card.classList.toggle('done', !!word);
+    card.querySelectorAll('button.v').forEach(button => {
+      button.classList.toggle('on', button.dataset.v === word);
+    });
+  });
+  const total = document.querySelectorAll('.item').length;
+  document.getElementById('count').textContent = total + ' 条';
+  document.getElementById('progress').textContent =
+    '已判 ' + Object.keys(judged).length + '/' + total;
+}
+
+function filter() {
+  const onlyUnjudged = document.getElementById('onlyunjudged').checked;
+  document.querySelectorAll('.item').forEach(card => {
+    card.style.display = (onlyUnjudged && judged[card.dataset.id]) ? 'none' : '';
+  });
+}
+
+document.getElementById('list').addEventListener('click', event => {
+  const button = event.target.closest('button.v');
+  if (!button) { return; }
+  judged[button.closest('.item').dataset.id] = button.dataset.v;
+  save();
+  paint();
+});
+document.getElementById('onlyunjudged').onchange = filter;
+document.getElementById('clear').onclick = () => {
+  if (confirm('清空已判的 ' + Object.keys(judged).length + ' 条？')) {
+    judged = {};
+    save();
+    paint();
+    filter();
+  }
+};
+document.getElementById('export').onclick = () => {
+  const lines = ['| # | 层 | 歌 | 小节 | 来源 | 音符 | 判词 |', '|---|---|---|---|---|---|---|'];
+  document.querySelectorAll('.item').forEach((card, index) => {
+    const word = {yes: '像', no: '不像', unsure: '说不清'}[judged[card.dataset.id]] || '';
+    lines.push('| ' + (index + 1) + ' | ' + card.dataset.bucket + ' | ' + card.dataset.song +
+      ' | ' + card.dataset.bars + ' | ' + card.dataset.kind + ' | ' + card.dataset.notes +
+      ' | ' + word + ' |');
+  });
+  const dump = document.getElementById('dump');
+  dump.style.display = 'block';
+  dump.textContent = lines.join('\n');
+};
+
+// 播放器：自动从"前一小节"起、放到"后一小节"停。脚本挂掉也只是少了自动跳转，手动拖一样能听。
+document.querySelectorAll('.item audio').forEach(audio => {
+  const card = audio.closest('.item');
+  const from = Number(card.dataset.playstart || 0);
+  const to = Number(card.dataset.playend || 0);
+  audio.addEventListener('loadedmetadata', () => { audio.currentTime = from; });
+  audio.addEventListener('play', () => {
+    if (audio.currentTime < from - 0.2) { audio.currentTime = from; }
+  });
+  audio.addEventListener('timeupdate', () => {
+    if (to && audio.currentTime >= to) { audio.pause(); }
+  });
+});
+
+try {
+  load();
+  paint();
+} catch (error) {
+  fail('页面脚本出错：' + error.message);
+}
+</script>
+</body>
+</html>

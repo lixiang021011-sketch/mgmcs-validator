@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>和弦体检 · MGMCS</title>
+<link rel="stylesheet" href="style.css?v=21">
+<style>
+  body { margin: 0; padding: 18px 22px; }
+  .nav a { margin-right: 14px; }
+  .grid { display: grid; grid-template-columns: 220px 1fr; gap: 18px; }
+  #songs { max-height: 78vh; overflow: auto; border-right: 1px solid #2a2f37; padding-right: 8px; }
+  #songs button { display: block; width: 100%; text-align: left; margin: 2px 0; }
+  #songs button.on { border-color: #6ea8fe; }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; }
+  th, td { border-bottom: 1px solid #23272e; padding: 3px 8px; text-align: left; }
+  th { color: #9aa4b2; font-weight: 600; }
+  tr.diff { background: #2b2418; }
+  tr.same { color: #8b949e; }
+  .t { font-variant-numeric: tabular-nums; }
+  .pill { border: 1px solid #30363d; border-radius: 10px; padding: 0 6px; font-size: 12px; color: #9aa4b2; }
+  #now { color: #9aa4b2; font-size: 12.5px; margin: 6px 0; }
+  .legend { color: #9aa4b2; font-size: 12.5px; margin: 8px 0 12px; }
+  audio { width: 100%; margin: 6px 0 10px; }
+</style>
+</head>
+<body>
+<div class="nav">
+  <a href="index.html">验证器</a>
+  <a href="queue.html">听审队列</a>
+  <a href="timing.html">timing 体检</a>
+  <a href="songs.html">歌单</a>
+  <b>和弦体检</b>
+  <span id="dict"></span>
+</div>
+<h2>和弦体检 <span class="pill" id="count">…</span></h2>
+<p class="legend">
+  三条读法落在同一个半小节格上：<b>模板</b>＝我们自己的音符 → 纵向音集 → 和弦（不读贝斯、可解释）；
+  <b>图</b>＝上游和弦图（参考贝斯解出来的半小节三和弦，本身不是证据）；
+  <b>madmom</b>＝音频上的 CNN+CRF（第三条独立耳朵）。
+  <b>三格不一致的行才值得听</b>——一致只说明没有明显分歧，不说明对。
+  标签空着＝那一格该来源没有观测。小节号是**我们自己的口径**（第一根小节线 = 第 1 小节），
+  和上游 REAPER 工程的小节号不是一套；每小节两格（前半 / 后半），秒只作参考。
+</p>
+<audio id="player" preload="none" controls></audio>
+<p id="now">还没选（点歌名，再点某行的 ▶）</p>
+<p class="legend" id="audiowarn"></p>
+<div class="grid">
+  <div id="songs"></div>
+  <div>
+    <div id="summary" class="legend"></div>
+    <table id="spans"><thead><tr><th>小节</th><th>时间</th><th>模板</th><th>图</th><th>madmom</th><th></th></tr></thead><tbody></tbody></table>
+  </div>
+</div>
+<script>
+const AUDIO_BASE = 'http://127.0.0.1:8134/audio/';      // 听音镜像（tools/serve.py）
+const DICT_URL = '';                                     // 隔壁检索词典的地址，拿到就填这儿
+let data = null, current = null, player = null, stopAt = null;
+
+function clock(seconds) {
+  const total = Math.max(0, Math.floor(seconds));
+  return Math.floor(total / 60) + ':' + String(total % 60).padStart(2, '0');
+}
+function same(row) {
+  const values = ['template', 'chart', 'madmom'].map(k => row[k] || '').filter(v => v);
+  return values.length < 2 || values.every(v => v === values[0]);
+}
+function render() {
+  const list = document.getElementById('songs');
+  data.songs.forEach(song => {
+    const button = document.createElement('button');
+    button.textContent = song.song;
+    button.onclick = () => select(song);
+    list.appendChild(button);
+  });
+  document.getElementById('count').textContent = data.songs.length + ' 首';
+  if (DICT_URL) {
+    document.getElementById('dict').innerHTML =
+      '<a href="' + DICT_URL + '" target="_blank">检索词典（隔壁）</a>';
+  } else {
+    document.getElementById('dict').innerHTML =
+      '<span class="pill" title="把地址填进 harmony.html 的 DICT_URL，或让隔壁给入口清单">检索词典：待接</span>';
+  }
+}
+function select(song) {
+  current = song;
+  [...document.querySelectorAll('#songs button')].forEach(b => b.classList.toggle('on', b.textContent === song.song));
+  const body = document.querySelector('#spans tbody');
+  body.innerHTML = '';
+  const diffs = song.spans.filter(row => !same(row));
+  document.getElementById('summary').innerHTML =
+    '读法 ' + (song.reading || '?') + '｜timing ' + (song.timing || 'unknown') +
+    '｜格 ' + song.spans.length + ' 个，其中三条不一致 ' + diffs.length + ' 个｜' +
+    Object.entries(song.agreement || {}).filter(([, v]) => v && v.rootAgreement !== null)
+      .map(([k, v]) => k + ' ' + (v.rootAgreement * 100).toFixed(0) + '%').join('　');
+  song.spans.forEach(row => {
+    const tr = document.createElement('tr');
+    tr.className = same(row) ? 'same' : 'diff';
+    tr.innerHTML = '<td class="t"><b>' + row.bar + '</b> ' + (row.half === 1 ? '前半' : '后半') + '</td>' +
+      '<td class="t">' + clock(row.start) + '–' + clock(row.end) + '</td>' +
+      '<td>' + (row.template || '·') + '</td><td>' + (row.chart || '·') + '</td>' +
+      '<td>' + (row.madmom || '·') + '</td>';
+    const cell = document.createElement('td');
+    const play = document.createElement('button');
+    play.textContent = '▶';
+    play.onclick = () => playSpan(song, row);
+    cell.appendChild(play);
+    tr.appendChild(cell);
+    body.appendChild(tr);
+  });
+}
+function playSpan(song, row) {
+  if (!song.audio || !player) return;
+  const file = song.audio.split('/').map(encodeURIComponent).join('/');
+  if (player.dataset.file !== file) {
+    player.dataset.file = file;
+    player.src = AUDIO_BASE + file;
+  }
+  player.currentTime = Math.max(0, row.start - 0.4);
+  stopAt = row.end + 0.4;
+  player.play();
+  document.getElementById('now').textContent =
+    '在放：' + song.song + ' ' + clock(row.start) + '–' + clock(row.end);
+}
+fetch('harmony.json').then(r => r.json()).then(doc => {
+  data = doc;
+  player = document.getElementById('player');
+  player.ontimeupdate = () => { if (stopAt && player.currentTime >= stopAt) { player.pause(); stopAt = null; } };
+  player.onerror = () => {
+    document.getElementById('audiowarn').textContent =
+      '音频没加载成功：听音镜像要在 8134 端口跑着（tools/serve.py --audio-root ...），或者在 harmony.html 里改 AUDIO_BASE。';
+  };
+  render();
+  if (data.songs.length) select(data.songs[0]);
+}).catch(err => {
+  document.getElementById('summary').textContent = '读不到 harmony.json：' + err;
+});
+</script>
+</body>
+</html>

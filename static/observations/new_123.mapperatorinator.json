@@ -1,0 +1,28 @@
+{
+ "schemaVersion": "0.1",
+ "song": "new_123",
+ "source": "mapperatorinator",
+ "producedBy": "import_mapperatorinator_timing.py",
+ "observationsFrom": "timing_events.json（模型自己那串 observation）",
+ "observations": {
+  "beats": [],
+  "measures": [],
+  "timingPoints": [],
+  "exportedRedlines": []
+ },
+ "derived": {
+  "pulsePositions": [],
+  "localBeatSeconds": [],
+  "barSeconds": 0.0
+ },
+ "gaps": [],
+ "validRanges": [],
+ "health": {
+  "status": "ineligible",
+  "reasons": [
+   "beat 或 measure observation 太少（0 / 0）"
+  ],
+  "notes": []
+ },
+ "audioDurationSeconds": null
+}

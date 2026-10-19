@@ -1,0 +1,277 @@
+{
+ "schemaVersion": "0.1",
+ "song": "new_124",
+ "source": "mapperatorinator",
+ "observationsFrom": "timing_events.json（模型自己那串 observation）",
+ "timingEvents": [
+  {
+   "type": "timing_point",
+   "time": 12.1
+  },
+  {
+   "type": "beat",
+   "time": 12.85
+  },
+  {
+   "type": "beat",
+   "time": 13.597
+  },
+  {
+   "type": "beat",
+   "time": 14.347
+  },
+  {
+   "type": "measure",
+   "time": 15.105
+  },
+  {
+   "type": "beat",
+   "time": 15.865
+  },
+  {
+   "type": "beat",
+   "time": 16.602
+  },
+  {
+   "type": "beat",
+   "time": 17.352
+  },
+  {
+   "type": "measure",
+   "time": 18.11
+  },
+  {
+   "type": "beat",
+   "time": 18.86
+  },
+  {
+   "type": "beat",
+   "time": 19.61
+  },
+  {
+   "type": "beat",
+   "time": 20.357
+  },
+  {
+   "type": "measure",
+   "time": 21.097
+  },
+  {
+   "type": "beat",
+   "time": 21.855
+  },
+  {
+   "type": "beat",
+   "time": 22.595
+  },
+  {
+   "type": "beat",
+   "time": 23.353
+  },
+  {
+   "type": "measure",
+   "time": 24.103
+  },
+  {
+   "type": "beat",
+   "time": 24.85
+  },
+  {
+   "type": "beat",
+   "time": 25.6
+  },
+  {
+   "type": "beat",
+   "time": 26.358
+  },
+  {
+   "type": "measure",
+   "time": 27.098
+  },
+  {
+   "type": "beat",
+   "time": 27.855
+  },
+  {
+   "type": "beat",
+   "time": 28.605
+  },
+  {
+   "type": "beat",
+   "time": 29.365
+  },
+  {
+   "type": "measure",
+   "time": 30.113
+  },
+  {
+   "type": "beat",
+   "time": 30.853
+  },
+  {
+   "type": "beat",
+   "time": 31.6
+  },
+  {
+   "type": "beat",
+   "time": 32.35
+  },
+  {
+   "type": "measure",
+   "time": 33.098
+  },
+  {
+   "type": "beat",
+   "time": 33.848
+  },
+  {
+   "type": "beat",
+   "time": 34.606
+  },
+  {
+   "type": "beat",
+   "time": 35.356
+  },
+  {
+   "type": "timing_point",
+   "time": 61.597
+  },
+  {
+   "type": "beat",
+   "time": 62.364
+  },
+  {
+   "type": "beat",
+   "time": 63.104
+  },
+  {
+   "type": "beat",
+   "time": 63.844
+  },
+  {
+   "type": "measure",
+   "time": 64.602
+  },
+  {
+   "type": "beat",
+   "time": 65.352
+  },
+  {
+   "type": "beat",
+   "time": 66.109
+  },
+  {
+   "type": "beat",
+   "time": 66.859
+  },
+  {
+   "type": "measure",
+   "time": 67.597
+  },
+  {
+   "type": "beat",
+   "time": 68.357
+  },
+  {
+   "type": "beat",
+   "time": 69.104
+  },
+  {
+   "type": "beat",
+   "time": 69.854
+  },
+  {
+   "type": "measure",
+   "time": 70.602
+  },
+  {
+   "type": "beat",
+   "time": 71.352
+  },
+  {
+   "type": "beat",
+   "time": 72.099
+  },
+  {
+   "type": "beat",
+   "time": 72.859
+  },
+  {
+   "type": "measure",
+   "time": 73.609
+  },
+  {
+   "type": "beat",
+   "time": 74.347
+  },
+  {
+   "type": "beat",
+   "time": 75.107
+  },
+  {
+   "type": "beat",
+   "time": 75.855
+  },
+  {
+   "type": "measure",
+   "time": 76.615
+  },
+  {
+   "type": "beat",
+   "time": 77.352
+  },
+  {
+   "type": "beat",
+   "time": 78.102
+  },
+  {
+   "type": "beat",
+   "time": 78.86
+  },
+  {
+   "type": "measure",
+   "time": 79.61
+  },
+  {
+   "type": "beat",
+   "time": 80.347
+  },
+  {
+   "type": "beat",
+   "time": 81.107
+  },
+  {
+   "type": "beat",
+   "time": 81.847
+  },
+  {
+   "type": "measure",
+   "time": 82.605
+  },
+  {
+   "type": "beat",
+   "time": 83.355
+  },
+  {
+   "type": "beat",
+   "time": 84.102
+  },
+  {
+   "type": "beat",
+   "time": 84.852
+  }
+ ],
+ "redlines": [
+  {
+   "time": 12.1,
+   "bpm": 80.0,
+   "meter": 4
+  },
+  {
+   "time": 61.597,
+   "bpm": 80.0,
+   "meter": 4
+  }
+ ],
+ "audioDurationSeconds": null
+}

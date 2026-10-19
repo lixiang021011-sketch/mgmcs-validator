@@ -1,0 +1,1358 @@
+[
+ {
+  "type": "timing_point",
+  "time": 1.185
+ },
+ {
+  "type": "beat",
+  "time": 1.785
+ },
+ {
+  "type": "beat",
+  "time": 2.385
+ },
+ {
+  "type": "beat",
+  "time": 2.985
+ },
+ {
+  "type": "measure",
+  "time": 3.585
+ },
+ {
+  "type": "beat",
+  "time": 4.185
+ },
+ {
+  "type": "beat",
+  "time": 4.795
+ },
+ {
+  "type": "beat",
+  "time": 5.385
+ },
+ {
+  "type": "measure",
+  "time": 5.995
+ },
+ {
+  "type": "beat",
+  "time": 6.585
+ },
+ {
+  "type": "beat",
+  "time": 7.195
+ },
+ {
+  "type": "beat",
+  "time": 7.785
+ },
+ {
+  "type": "measure",
+  "time": 8.395
+ },
+ {
+  "type": "beat",
+  "time": 8.985
+ },
+ {
+  "type": "beat",
+  "time": 9.595
+ },
+ {
+  "type": "beat",
+  "time": 10.192
+ },
+ {
+  "type": "measure",
+  "time": 10.782
+ },
+ {
+  "type": "beat",
+  "time": 11.382
+ },
+ {
+  "type": "beat",
+  "time": 11.99
+ },
+ {
+  "type": "beat",
+  "time": 12.58
+ },
+ {
+  "type": "measure",
+  "time": 13.187
+ },
+ {
+  "type": "beat",
+  "time": 13.787
+ },
+ {
+  "type": "beat",
+  "time": 14.377
+ },
+ {
+  "type": "beat",
+  "time": 14.985
+ },
+ {
+  "type": "measure",
+  "time": 15.585
+ },
+ {
+  "type": "beat",
+  "time": 16.185
+ },
+ {
+  "type": "beat",
+  "time": 16.782
+ },
+ {
+  "type": "beat",
+  "time": 17.382
+ },
+ {
+  "type": "measure",
+  "time": 17.992
+ },
+ {
+  "type": "beat",
+  "time": 18.58
+ },
+ {
+  "type": "beat",
+  "time": 19.18
+ },
+ {
+  "type": "beat",
+  "time": 19.787
+ },
+ {
+  "type": "measure",
+  "time": 20.387
+ },
+ {
+  "type": "beat",
+  "time": 20.977
+ },
+ {
+  "type": "beat",
+  "time": 21.575
+ },
+ {
+  "type": "beat",
+  "time": 22.175
+ },
+ {
+  "type": "measure",
+  "time": 22.785
+ },
+ {
+  "type": "beat",
+  "time": 23.383
+ },
+ {
+  "type": "beat",
+  "time": 23.983
+ },
+ {
+  "type": "beat",
+  "time": 24.58
+ },
+ {
+  "type": "measure",
+  "time": 25.18
+ },
+ {
+  "type": "beat",
+  "time": 25.78
+ },
+ {
+  "type": "beat",
+  "time": 26.378
+ },
+ {
+  "type": "beat",
+  "time": 26.988
+ },
+ {
+  "type": "measure",
+  "time": 27.588
+ },
+ {
+  "type": "beat",
+  "time": 28.185
+ },
+ {
+  "type": "beat",
+  "time": 28.775
+ },
+ {
+  "type": "beat",
+  "time": 29.385
+ },
+ {
+  "type": "measure",
+  "time": 29.983
+ },
+ {
+  "type": "beat",
+  "time": 30.583
+ },
+ {
+  "type": "beat",
+  "time": 31.18
+ },
+ {
+  "type": "beat",
+  "time": 31.78
+ },
+ {
+  "type": "measure",
+  "time": 32.38
+ },
+ {
+  "type": "beat",
+  "time": 32.988
+ },
+ {
+  "type": "beat",
+  "time": 33.578
+ },
+ {
+  "type": "beat",
+  "time": 34.178
+ },
+ {
+  "type": "measure",
+  "time": 34.786
+ },
+ {
+  "type": "beat",
+  "time": 35.386
+ },
+ {
+  "type": "beat",
+  "time": 35.986
+ },
+ {
+  "type": "beat",
+  "time": 36.593
+ },
+ {
+  "type": "measure",
+  "time": 37.183
+ },
+ {
+  "type": "beat",
+  "time": 37.781
+ },
+ {
+  "type": "beat",
+  "time": 38.391
+ },
+ {
+  "type": "beat",
+  "time": 38.991
+ },
+ {
+  "type": "measure",
+  "time": 39.588
+ },
+ {
+  "type": "beat",
+  "time": 40.188
+ },
+ {
+  "type": "beat",
+  "time": 40.788
+ },
+ {
+  "type": "beat",
+  "time": 41.386
+ },
+ {
+  "type": "measure",
+  "time": 41.986
+ },
+ {
+  "type": "beat",
+  "time": 42.576
+ },
+ {
+  "type": "beat",
+  "time": 43.183
+ },
+ {
+  "type": "beat",
+  "time": 43.783
+ },
+ {
+  "type": "measure",
+  "time": 44.391
+ },
+ {
+  "type": "beat",
+  "time": 44.981
+ },
+ {
+  "type": "beat",
+  "time": 45.581
+ },
+ {
+  "type": "beat",
+  "time": 46.178
+ },
+ {
+  "type": "measure",
+  "time": 46.778
+ },
+ {
+  "type": "beat",
+  "time": 47.388
+ },
+ {
+  "type": "beat",
+  "time": 47.986
+ },
+ {
+  "type": "beat",
+  "time": 48.586
+ },
+ {
+  "type": "measure",
+  "time": 49.184
+ },
+ {
+  "type": "beat",
+  "time": 49.784
+ },
+ {
+  "type": "beat",
+  "time": 50.384
+ },
+ {
+  "type": "beat",
+  "time": 50.981
+ },
+ {
+  "type": "measure",
+  "time": 51.581
+ },
+ {
+  "type": "beat",
+  "time": 52.181
+ },
+ {
+  "type": "beat",
+  "time": 52.789
+ },
+ {
+  "type": "beat",
+  "time": 53.379
+ },
+ {
+  "type": "measure",
+  "time": 53.979
+ },
+ {
+  "type": "beat",
+  "time": 54.576
+ },
+ {
+  "type": "beat",
+  "time": 55.176
+ },
+ {
+  "type": "beat",
+  "time": 55.784
+ },
+ {
+  "type": "measure",
+  "time": 56.374
+ },
+ {
+  "type": "beat",
+  "time": 56.984
+ },
+ {
+  "type": "beat",
+  "time": 57.581
+ },
+ {
+  "type": "beat",
+  "time": 58.181
+ },
+ {
+  "type": "measure",
+  "time": 58.781
+ },
+ {
+  "type": "beat",
+  "time": 59.389
+ },
+ {
+  "type": "beat",
+  "time": 59.979
+ },
+ {
+  "type": "beat",
+  "time": 60.579
+ },
+ {
+  "type": "measure",
+  "time": 61.187
+ },
+ {
+  "type": "beat",
+  "time": 61.787
+ },
+ {
+  "type": "beat",
+  "time": 62.384
+ },
+ {
+  "type": "beat",
+  "time": 62.984
+ },
+ {
+  "type": "measure",
+  "time": 63.584
+ },
+ {
+  "type": "beat",
+  "time": 64.182
+ },
+ {
+  "type": "beat",
+  "time": 64.782
+ },
+ {
+  "type": "beat",
+  "time": 65.392
+ },
+ {
+  "type": "measure",
+  "time": 65.979
+ },
+ {
+  "type": "beat",
+  "time": 66.579
+ },
+ {
+  "type": "beat",
+  "time": 67.187
+ },
+ {
+  "type": "beat",
+  "time": 67.777
+ },
+ {
+  "type": "measure",
+  "time": 68.387
+ },
+ {
+  "type": "beat",
+  "time": 68.984
+ },
+ {
+  "type": "beat",
+  "time": 69.584
+ },
+ {
+  "type": "beat",
+  "time": 70.184
+ },
+ {
+  "type": "measure",
+  "time": 70.792
+ },
+ {
+  "type": "beat",
+  "time": 71.382
+ },
+ {
+  "type": "beat",
+  "time": 71.982
+ },
+ {
+  "type": "beat",
+  "time": 72.589
+ },
+ {
+  "type": "measure",
+  "time": 73.189
+ },
+ {
+  "type": "beat",
+  "time": 73.787
+ },
+ {
+  "type": "beat",
+  "time": 74.387
+ },
+ {
+  "type": "beat",
+  "time": 74.987
+ },
+ {
+  "type": "measure",
+  "time": 75.585
+ },
+ {
+  "type": "beat",
+  "time": 76.185
+ },
+ {
+  "type": "beat",
+  "time": 76.785
+ },
+ {
+  "type": "beat",
+  "time": 77.382
+ },
+ {
+  "type": "measure",
+  "time": 77.982
+ },
+ {
+  "type": "beat",
+  "time": 78.582
+ },
+ {
+  "type": "beat",
+  "time": 79.18
+ },
+ {
+  "type": "beat",
+  "time": 79.78
+ },
+ {
+  "type": "measure",
+  "time": 80.387
+ },
+ {
+  "type": "beat",
+  "time": 80.987
+ },
+ {
+  "type": "beat",
+  "time": 81.587
+ },
+ {
+  "type": "beat",
+  "time": 82.185
+ },
+ {
+  "type": "measure",
+  "time": 82.785
+ },
+ {
+  "type": "beat",
+  "time": 83.385
+ },
+ {
+  "type": "beat",
+  "time": 83.982
+ },
+ {
+  "type": "beat",
+  "time": 84.582
+ },
+ {
+  "type": "measure",
+  "time": 85.19
+ },
+ {
+  "type": "beat",
+  "time": 85.78
+ },
+ {
+  "type": "beat",
+  "time": 86.39
+ },
+ {
+  "type": "beat",
+  "time": 86.988
+ },
+ {
+  "type": "measure",
+  "time": 87.588
+ },
+ {
+  "type": "beat",
+  "time": 88.188
+ },
+ {
+  "type": "beat",
+  "time": 88.785
+ },
+ {
+  "type": "beat",
+  "time": 89.395
+ },
+ {
+  "type": "measure",
+  "time": 89.985
+ },
+ {
+  "type": "beat",
+  "time": 90.573
+ },
+ {
+  "type": "beat",
+  "time": 91.183
+ },
+ {
+  "type": "beat",
+  "time": 91.78
+ },
+ {
+  "type": "measure",
+  "time": 92.38
+ },
+ {
+  "type": "beat",
+  "time": 92.99
+ },
+ {
+  "type": "beat",
+  "time": 93.588
+ },
+ {
+  "type": "beat",
+  "time": 94.178
+ },
+ {
+  "type": "measure",
+  "time": 94.788
+ },
+ {
+  "type": "beat",
+  "time": 95.385
+ },
+ {
+  "type": "beat",
+  "time": 95.985
+ },
+ {
+  "type": "beat",
+  "time": 96.585
+ },
+ {
+  "type": "measure",
+  "time": 97.183
+ },
+ {
+  "type": "beat",
+  "time": 97.783
+ },
+ {
+  "type": "beat",
+  "time": 98.38
+ },
+ {
+  "type": "beat",
+  "time": 98.98
+ },
+ {
+  "type": "measure",
+  "time": 99.58
+ },
+ {
+  "type": "beat",
+  "time": 100.188
+ },
+ {
+  "type": "beat",
+  "time": 100.788
+ },
+ {
+  "type": "beat",
+  "time": 101.388
+ },
+ {
+  "type": "measure",
+  "time": 101.986
+ },
+ {
+  "type": "beat",
+  "time": 102.586
+ },
+ {
+  "type": "beat",
+  "time": 103.183
+ },
+ {
+  "type": "beat",
+  "time": 103.793
+ },
+ {
+  "type": "measure",
+  "time": 104.383
+ },
+ {
+  "type": "beat",
+  "time": 104.981
+ },
+ {
+  "type": "beat",
+  "time": 105.581
+ },
+ {
+  "type": "beat",
+  "time": 106.191
+ },
+ {
+  "type": "measure",
+  "time": 106.788
+ },
+ {
+  "type": "beat",
+  "time": 107.378
+ },
+ {
+  "type": "beat",
+  "time": 107.988
+ },
+ {
+  "type": "beat",
+  "time": 108.576
+ },
+ {
+  "type": "measure",
+  "time": 109.186
+ },
+ {
+  "type": "beat",
+  "time": 109.793
+ },
+ {
+  "type": "beat",
+  "time": 110.393
+ },
+ {
+  "type": "beat",
+  "time": 110.983
+ },
+ {
+  "type": "measure",
+  "time": 111.581
+ },
+ {
+  "type": "beat",
+  "time": 112.181
+ },
+ {
+  "type": "beat",
+  "time": 112.781
+ },
+ {
+  "type": "beat",
+  "time": 113.389
+ },
+ {
+  "type": "measure",
+  "time": 113.989
+ },
+ {
+  "type": "timing_point",
+  "time": 123.594
+ },
+ {
+  "type": "beat",
+  "time": 123.884
+ },
+ {
+  "type": "beat",
+  "time": 124.194
+ },
+ {
+  "type": "beat",
+  "time": 124.491
+ },
+ {
+  "type": "measure",
+  "time": 124.791
+ },
+ {
+  "type": "beat",
+  "time": 125.081
+ },
+ {
+  "type": "beat",
+  "time": 125.391
+ },
+ {
+  "type": "beat",
+  "time": 125.691
+ },
+ {
+  "type": "measure",
+  "time": 125.991
+ },
+ {
+  "type": "beat",
+  "time": 126.289
+ },
+ {
+  "type": "beat",
+  "time": 126.589
+ },
+ {
+  "type": "beat",
+  "time": 126.889
+ },
+ {
+  "type": "measure",
+  "time": 127.189
+ },
+ {
+  "type": "beat",
+  "time": 127.489
+ },
+ {
+  "type": "beat",
+  "time": 127.787
+ },
+ {
+  "type": "beat",
+  "time": 128.087
+ },
+ {
+  "type": "measure",
+  "time": 128.387
+ },
+ {
+  "type": "beat",
+  "time": 128.687
+ },
+ {
+  "type": "beat",
+  "time": 128.987
+ },
+ {
+  "type": "beat",
+  "time": 129.287
+ },
+ {
+  "type": "measure",
+  "time": 129.584
+ },
+ {
+  "type": "beat",
+  "time": 129.894
+ },
+ {
+  "type": "beat",
+  "time": 130.194
+ },
+ {
+  "type": "beat",
+  "time": 130.494
+ },
+ {
+  "type": "measure",
+  "time": 130.794
+ },
+ {
+  "type": "beat",
+  "time": 131.092
+ },
+ {
+  "type": "beat",
+  "time": 131.392
+ },
+ {
+  "type": "beat",
+  "time": 131.682
+ },
+ {
+  "type": "measure",
+  "time": 131.992
+ },
+ {
+  "type": "beat",
+  "time": 132.282
+ },
+ {
+  "type": "beat",
+  "time": 132.582
+ },
+ {
+  "type": "beat",
+  "time": 132.889
+ },
+ {
+  "type": "measure",
+  "time": 133.189
+ },
+ {
+  "type": "beat",
+  "time": 133.489
+ },
+ {
+  "type": "beat",
+  "time": 133.789
+ },
+ {
+  "type": "beat",
+  "time": 134.089
+ },
+ {
+  "type": "measure",
+  "time": 134.387
+ },
+ {
+  "type": "beat",
+  "time": 134.687
+ },
+ {
+  "type": "beat",
+  "time": 134.987
+ },
+ {
+  "type": "beat",
+  "time": 135.287
+ },
+ {
+  "type": "measure",
+  "time": 135.587
+ },
+ {
+  "type": "beat",
+  "time": 140.3
+ },
+ {
+  "type": "beat",
+  "time": 140.6
+ },
+ {
+  "type": "measure",
+  "time": 140.917
+ },
+ {
+  "type": "beat",
+  "time": 141.207
+ },
+ {
+  "type": "beat",
+  "time": 141.507
+ },
+ {
+  "type": "beat",
+  "time": 141.797
+ },
+ {
+  "type": "measure",
+  "time": 142.107
+ },
+ {
+  "type": "beat",
+  "time": 142.407
+ },
+ {
+  "type": "beat",
+  "time": 142.705
+ },
+ {
+  "type": "timing_point",
+  "time": 142.785
+ },
+ {
+  "type": "beat",
+  "time": 143.395
+ },
+ {
+  "type": "beat",
+  "time": 143.975
+ },
+ {
+  "type": "beat",
+  "time": 144.592
+ },
+ {
+  "type": "measure",
+  "time": 145.182
+ },
+ {
+  "type": "beat",
+  "time": 145.79
+ },
+ {
+  "type": "beat",
+  "time": 146.38
+ },
+ {
+  "type": "beat",
+  "time": 146.98
+ },
+ {
+  "type": "measure",
+  "time": 147.577
+ },
+ {
+  "type": "beat",
+  "time": 148.187
+ },
+ {
+  "type": "beat",
+  "time": 148.787
+ },
+ {
+  "type": "beat",
+  "time": 149.385
+ },
+ {
+  "type": "measure",
+  "time": 149.985
+ },
+ {
+  "type": "beat",
+  "time": 150.585
+ },
+ {
+  "type": "beat",
+  "time": 151.192
+ },
+ {
+  "type": "beat",
+  "time": 151.792
+ },
+ {
+  "type": "measure",
+  "time": 152.38
+ },
+ {
+  "type": "beat",
+  "time": 152.98
+ },
+ {
+  "type": "beat",
+  "time": 153.59
+ },
+ {
+  "type": "beat",
+  "time": 154.188
+ },
+ {
+  "type": "measure",
+  "time": 154.788
+ },
+ {
+  "type": "beat",
+  "time": 155.388
+ },
+ {
+  "type": "beat",
+  "time": 155.995
+ },
+ {
+  "type": "beat",
+  "time": 156.585
+ },
+ {
+  "type": "measure",
+  "time": 157.195
+ },
+ {
+  "type": "beat",
+  "time": 157.783
+ },
+ {
+  "type": "beat",
+  "time": 158.383
+ },
+ {
+  "type": "beat",
+  "time": 158.99
+ },
+ {
+  "type": "measure",
+  "time": 159.59
+ },
+ {
+  "type": "beat",
+  "time": 160.18
+ },
+ {
+  "type": "beat",
+  "time": 160.788
+ },
+ {
+  "type": "beat",
+  "time": 161.378
+ },
+ {
+  "type": "measure",
+  "time": 161.988
+ },
+ {
+  "type": "beat",
+  "time": 162.585
+ },
+ {
+  "type": "beat",
+  "time": 163.185
+ },
+ {
+  "type": "beat",
+  "time": 163.783
+ },
+ {
+  "type": "measure",
+  "time": 164.383
+ },
+ {
+  "type": "beat",
+  "time": 164.983
+ },
+ {
+  "type": "beat",
+  "time": 165.581
+ },
+ {
+  "type": "beat",
+  "time": 166.181
+ },
+ {
+  "type": "measure",
+  "time": 166.781
+ },
+ {
+  "type": "beat",
+  "time": 167.388
+ },
+ {
+  "type": "beat",
+  "time": 167.988
+ },
+ {
+  "type": "beat",
+  "time": 168.588
+ },
+ {
+  "type": "measure",
+  "time": 169.186
+ },
+ {
+  "type": "beat",
+  "time": 169.786
+ },
+ {
+  "type": "beat",
+  "time": 170.383
+ },
+ {
+  "type": "beat",
+  "time": 170.983
+ },
+ {
+  "type": "measure",
+  "time": 171.583
+ },
+ {
+  "type": "beat",
+  "time": 172.181
+ },
+ {
+  "type": "beat",
+  "time": 172.781
+ },
+ {
+  "type": "beat",
+  "time": 173.381
+ },
+ {
+  "type": "measure",
+  "time": 173.988
+ },
+ {
+  "type": "beat",
+  "time": 174.578
+ },
+ {
+  "type": "beat",
+  "time": 175.188
+ },
+ {
+  "type": "beat",
+  "time": 175.776
+ },
+ {
+  "type": "measure",
+  "time": 176.376
+ },
+ {
+  "type": "beat",
+  "time": 176.983
+ },
+ {
+  "type": "beat",
+  "time": 177.583
+ },
+ {
+  "type": "beat",
+  "time": 178.183
+ },
+ {
+  "type": "measure",
+  "time": 178.781
+ },
+ {
+  "type": "beat",
+  "time": 179.381
+ },
+ {
+  "type": "beat",
+  "time": 179.981
+ },
+ {
+  "type": "beat",
+  "time": 180.589
+ },
+ {
+  "type": "measure",
+  "time": 181.189
+ },
+ {
+  "type": "beat",
+  "time": 181.786
+ },
+ {
+  "type": "beat",
+  "time": 182.386
+ },
+ {
+  "type": "beat",
+  "time": 182.986
+ },
+ {
+  "type": "measure",
+  "time": 183.584
+ },
+ {
+  "type": "beat",
+  "time": 184.184
+ },
+ {
+  "type": "beat",
+  "time": 184.784
+ },
+ {
+  "type": "beat",
+  "time": 185.381
+ },
+ {
+  "type": "measure",
+  "time": 185.981
+ },
+ {
+  "type": "beat",
+  "time": 186.581
+ },
+ {
+  "type": "beat",
+  "time": 187.179
+ },
+ {
+  "type": "beat",
+  "time": 187.789
+ },
+ {
+  "type": "measure",
+  "time": 188.386
+ },
+ {
+  "type": "beat",
+  "time": 188.976
+ },
+ {
+  "type": "beat",
+  "time": 189.576
+ },
+ {
+  "type": "beat",
+  "time": 190.184
+ },
+ {
+  "type": "measure",
+  "time": 190.784
+ },
+ {
+  "type": "beat",
+  "time": 191.384
+ },
+ {
+  "type": "beat",
+  "time": 191.982
+ },
+ {
+  "type": "beat",
+  "time": 192.582
+ },
+ {
+  "type": "measure",
+  "time": 193.182
+ },
+ {
+  "type": "beat",
+  "time": 193.789
+ },
+ {
+  "type": "beat",
+  "time": 194.389
+ },
+ {
+  "type": "beat",
+  "time": 194.977
+ },
+ {
+  "type": "measure",
+  "time": 195.587
+ },
+ {
+  "type": "beat",
+  "time": 196.177
+ },
+ {
+  "type": "beat",
+  "time": 196.784
+ },
+ {
+  "type": "beat",
+  "time": 197.384
+ },
+ {
+  "type": "measure",
+  "time": 197.974
+ },
+ {
+  "type": "beat",
+  "time": 198.582
+ },
+ {
+  "type": "beat",
+  "time": 199.182
+ },
+ {
+  "type": "beat",
+  "time": 199.782
+ },
+ {
+  "type": "measure",
+  "time": 200.379
+ },
+ {
+  "type": "beat",
+  "time": 200.989
+ },
+ {
+  "type": "beat",
+  "time": 201.577
+ },
+ {
+  "type": "beat",
+  "time": 202.177
+ }
+]

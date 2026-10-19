@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>研究前端 · 检索</title>
+<link rel="stylesheet" href="style.css?v=22">
+<style>
+  body { margin: 0; padding: 40px 22px; }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  form { display: flex; gap: 8px; margin: 18px 0 6px; flex-wrap: wrap; }
+  input[type=search] { flex: 1 1 320px; padding: 10px 12px; font-size: 16px; }
+  select, button { padding: 10px 12px; font-size: 15px; }
+  .muted { color: #9aa4b2; font-size: 12.5px; line-height: 1.8; }
+  a { color: #6ea8fe; }
+  ul { padding-left: 18px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>研究前端</h1>
+  <p class="muted" style="border:1px solid #9e6a03;background:#2b2418;padding:8px 10px;border-radius:6px">
+    这一页要**通过服务打开**：<a href="http://127.0.0.1:8125/">http://127.0.0.1:8125/</a>。
+    直接双击文件打开（地址栏是 <code>file://…</code>）表单没有地方提交，会像"无法访问"一样。
+    检索用 POST 提交：这个浏览器按**路径**缓存过 GET，换查询串也可能给你旧的那一份结果。
+  </p>
+  <p class="muted">按 <b>歌名 / 作者 / 专辑</b> 检索（现在是这三种，以后加别的标签）。
+     结果以歌曲为单位列出，点进去是那首歌的 MGMCS 页面，那里可以一键导出它的全部 JSON。</p>
+  <form action="http://127.0.0.1:8125/search" method="post">
+    <input type="search" name="q" placeholder="歌名 / 作者 / 专辑，例如 赤橙、ACIDMAN、鎌倉" autofocus>
+    <select name="field">
+      <option value="all">全部字段</option>
+      <option value="title">歌名</option>
+      <option value="artist">作者</option>
+      <option value="album">专辑</option>
+    </select>
+    <button type="submit">检索</button>
+  </form>
+  <p class="muted">
+    <a href="/search?q=">看全部歌曲</a>　·　
+    同一份数据也能直接取：<a href="/api/songs">/api/songs</a>　
+    <a href="/api/search?q=">/api/search?q=</a>　·　
+    <a href="/schema.html">数据说明书</a>
+  </p>
+  <p class="muted">这个地方只干一件事：<b>把数据生出来给你</b>。每层是什么、字段什么含义、
+     哪些是原始数据哪些是我们做过的分析，都写在<a href="/schema.html">数据说明书</a>里；
+     怎么研究由你决定。</p>
+  <p class="muted">这一页**没有脚本**：表单提交给后端，结果页由后端渲染。这样在任何浏览器里都能用
+    （研究者的浏览器里脚本不跑，之前两版靠脚本建内容的页面都是空的）。</p>
+</div>
+</body>
+</html>
